@@ -8,8 +8,7 @@ jobs:
     uses: bytesphere-org/ci-templates/.github/workflows/pick-runner.yml@main
     with:
       org: bytesphere-org
-    secrets:
-      RUNNER_STATUS_TOKEN: ${{ secrets.RUNNER_STATUS_TOKEN }}
+    secrets: inherit
 
   run-on-picked:
     needs: pick-runner
